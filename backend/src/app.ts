@@ -15,12 +15,7 @@ mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
 app.use(cors({
-  origin: [
-    'https://mesto.loown101.nomoredomains.work/',
-    'http://mesto.loown101.nomoredomains.work',
-  ],
-  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: '*',
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
